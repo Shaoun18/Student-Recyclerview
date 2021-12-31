@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/studentList">
+
+    <fragment
+        android:id="@+id/studentList"
+        android:name="com.seip.android.studentreciclerview.StudentList"
+        android:label="fragment_student_list"
+        tools:layout="@layout/fragment_student_list" >
+        <action
+            android:id="@+id/to_create_student_action"
+            app:destination="@id/createStudent" />
+    </fragment>
+    <fragment
+        android:id="@+id/createStudent"
+        android:name="com.seip.android.studentreciclerview.CreateStudent"
+        android:label="fragment_create_student"
+        tools:layout="@layout/fragment_create_student" />
+</navigation>
